@@ -1,0 +1,34 @@
+const express = require("express");
+const app = express();
+const router = express.Router();
+const port = process.env.PORT || 4000;
+bodyParser = require("body-parser");
+
+app.engine("html", require("ejs").renderFile);
+app.set("view engine", "ejs", "html");
+
+
+
+app.use(express.static('public'));
+
+
+
+
+app.get("/", function (req, res) {
+
+
+  res.render("index", {});
+});
+
+
+app.get("/start", async (req, res) => {
+  res.render("start");
+});
+
+
+app.use(express.static("public"));
+
+
+app.listen(port, () => {
+  console.log(`server online at http://localhost:${port}}`);
+});

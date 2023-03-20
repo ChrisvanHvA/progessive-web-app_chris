@@ -1,0 +1,23 @@
+{
+  "name": "progressive-web-app",
+  "version": "1.0.0",
+  "description": "![pwa](https://user-images.githubusercontent.com/3104648/28351989-7f68389e-6c4b-11e7-9bf2-e9fcd4977e7a.png)",
+  "main": "java.js",
+  "scripts": {
+    "test": "hi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisvanHvA/progessive-web-app_chris.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisvanHvA/progessive-web-app_chris/issues"
+  },
+  "homepage": "https://github.com/ChrisvanHvA/progessive-web-app_chris#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
