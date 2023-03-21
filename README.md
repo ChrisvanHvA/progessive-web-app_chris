@@ -16,3 +16,5 @@ in de eerste week heb ik de opdracht gekregen om te werken met de Web app die ik
 
 Op de eerste dag begon ik met de npm packages te downloaden.
 daarna ben ik de content van de website gaan opsplitsen in aparte EJS bestanden.
+
+Door middel van Nodefetch heb ik de info uit de api in de console kunnen ophalen.
