@@ -1,18 +1,45 @@
 <section class="profile">
+
     <div class="bar">
         <h2>Profile</h2>
         <button><img src="images/close.png"></button>
     </div>
-    <picture>
-        <img id="pfpic" src="images/pfpic.png">
-    </picture>
-    <p id="username">generic name</p>
-    <p id="bio">bio</p>
-    <ul>
-        <li>
-            <p id="followers">followers:</p>
-        </li>
-        <li>
-            <p id="following">following:</p>
-        </li>
-    </ul>
+
+    <% if(typeof userData == 'undefined' || userData.length == 0) { %>
+
+        <picture>
+            <img id="pfpic" src="images/pfpic.png">
+        </picture>
+    
+        <p id="username">generic name</p>
+        <p id="bio">bio</p>
+    
+        <ul>
+            <li>
+                <p id="followers">followers:</p>
+            </li>
+            <li>
+                <p id="following">following:</p>
+            </li>
+        </ul>
+
+    <% } else { %>
+
+        <picture>
+            <img id="pfpic" src="images/pfpic.png">
+        </picture>
+    
+        <p id="username"><%= userData.name %></p>
+        <p id="bio"><%= userData.bio %></p>
+    
+        <ul>
+            <li>
+                <p id="followers">followers: <%= userData.followers %></p>
+            </li>
+            <li>
+                <p id="following">following: <%= userData.following %></p>
+            </li>
+        </ul>
+
+    <% } %>
+    

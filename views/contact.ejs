@@ -1,18 +1,46 @@
 <section class="contact">
     <div class="bar">
 
-        <h2>Contact info</h2>
-        <button><img src="images/close.png"></button>
-    </div>
-    <ul>
-        <li><img src="images/email.png">
-            <a href="www.google.com" id="email">Email</a>
+        <% if(typeof userData == 'undefined' || userData.length == 0) { %>
 
-        <li><img src="images/work.png">
-            <a id="work">work</a>
-        </li>
-        <li><img src="images/github.png">
-            <a href="www.google.com" id="github"> github</a>
-        </li>
-        <li>
-            <p id="date">on github since</p>
+            <picture>
+                <img id="pfpic" src="images/pfpic.png">
+            </picture>
+        
+            <p id="username"><%= userData.name %></p>
+            <p id="bio"><%= userData.bio %></p>
+        
+            <ul>
+                <li>
+                    <p id="followers">followers: <%= userData.followers %></p>
+                </li>
+                <li>
+                    <p id="following">following: <%= userData.following %></p>
+                </li>
+            </ul>
+
+            <% } else { %>
+                <h2>Contact info</h2>
+                <button><img src="images/close.png"></button>
+            </div>
+            <ul>
+                <li><img src="images/email.png">
+                    <a href="www.google.com" id="email"><%= userData.email %> chris.gabriel@hotmail.nl</a>
+        
+                <li><img src="images/work.png">
+                    <a id="work"><%= userData.company %></a>
+                </li>
+                <li><img src="images/github.png">
+                    <a href="<%= userData.url %>" id="github"> github</a>
+                </li>
+                <li>
+                    <p id="date">on github since <%= userData.created_at %></p>
+
+
+
+
+                    </li>
+                </ul>
+        
+            <% } %>
+     
