@@ -9,12 +9,20 @@ const fetch = require('node-fetch');
 router.get("/", async function (req, res) {
 
 	const result = await apiCall();
-	console.log(result);
+	const repos = await repoCall();
+
+
+	repos.forEach(repo => {
+		console.log(repo.name);
+	});
+
 
 	res.render("index", {
-		'userData': result
+		'userData': result,
+		'repos': repos
 	});
-  
+	
+	
 });
 
 async function apiCall() {
@@ -32,6 +40,20 @@ async function apiCall() {
 		return [];
 	}
 }
+async function repoCall() {
+	try {
 
+		const repoResp = await fetch('https://api.github.com/users/ChrisvanHvA/repos');
+
+		if (repoResp.ok) {
+			const repos = await repoResp.json();	
+			return repos;
+		}
+		
+		return [];
+	} catch (error) {
+		return [];
+	}
+}
 // Make sure to export the router so it becomes available on imports
 module.exports = router;
