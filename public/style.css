@@ -6,9 +6,15 @@
 
 @font-face {
     font-family: 'w95faregular';
-    src: url('w95fa-webfont.woff2') format('woff2'), url('w95fa-webfont.woff') format('woff');
+ 
     font-weight: normal;
     font-style: normal;
+    
+
+    src: local('Pacifico Regular'), local('Pacifico-Regular'),
+    url('w95fa-webfont.woff2') format('woff2'), url('w95fa-webfont.woff') format('woff');
+   
+  font-display: swap;
 }
 
 :root {
@@ -74,6 +80,7 @@ article ol section:hover {
     background-image: radial-gradient(ellipse farthest-corner at 17px 17px, #cb00f9, #cb00f9 50%, #d000ff 50%);
     background-size: 17px 17px;
     opacity: 1;
+
 }
 
 h2 {
@@ -289,7 +296,7 @@ article>ol>li>section:nth-of-type(2):has(button:focus) {
 .animbg {
     z-index: -1;
     animation: scroll 70s linear infinite;
-    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80");
+    background: url("https://github.com/ChrisvanHvA/progessive-web-app_chris/blob/master/public/images/effect.jpg?raw=true");
     position: absolute;
     padding: 0;
     margin: 0;

@@ -8,7 +8,7 @@
     <% if(typeof userData == 'undefined' || userData.length == 0) { %>
 
         <picture>
-            <img id="pfpic" src="images/pfpic.png">
+            <img alt="profile pic" id="pfpic" src="images/pfpic.png">
         </picture>
     
         <p id="username">generic name</p>
@@ -26,7 +26,7 @@
     <% } else { %>
 
         <picture>
-            <img id="pfpic" src="images/pfpic.png">
+            <img alt="profile" id="pfpic" src="images/pfpic.png">
         </picture>
     
         <p id="username"><%= userData.name %></p>
