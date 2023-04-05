@@ -1,0 +1,48 @@
+{
+    "name": "Portfolio Chris",
+    "short_name":  "portfolio",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#FFE1c4",
+    "orientation": "portrait-primary",
+"icons": [
+    {
+        "src": "/icons/icon_48.png",
+        "type": "image/png",
+        "sizes": "48x48"
+    },
+    {
+        "src": "/icons/icon_72.png",
+        "type": "image/png",
+        "sizes": "72x72"
+    },
+    {
+        "src": "/icons/icon_96.png",
+        "type": "image/png",
+        "sizes": "96x96"
+    },
+    {
+        "src": "/icons/icon_144.png",
+        "type": "image/png",
+        "sizes": "144x144"
+    },
+    {
+        "src": "/icons/icon_192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+    },
+    {
+        "src": "/icons/icon_512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+    }, 
+      {
+        "src": "/icons/maskable_icon.png",
+        "type": "image/png",
+        "sizes": "478x478",
+        "purpose": "maskable" 
+      }
+]
+
+}

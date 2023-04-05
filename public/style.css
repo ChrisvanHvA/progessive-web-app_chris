@@ -11,9 +11,9 @@
     font-style: normal;
     
 
-    src: local('Pacifico Regular'), local('Pacifico-Regular'),
-    url('w95fa-webfont.woff2') format('woff2'), url('w95fa-webfont.woff') format('woff');
-   
+    src: local('Pacifico Regular'), local('Pacifico-Regular');
+    /* url('w95fa-webfont.woff2') format('woff2'), url('w95fa-webfont.woff') format('woff');
+    */
   font-display: swap;
 }
 
@@ -38,7 +38,7 @@ article section {
 
     opacity: 1;
     width: 40vw;
-    min-width: 25em;
+    min-width: 18em;
     margin: 1em;
 
 
@@ -110,7 +110,7 @@ h2 {
 .bar>button>img {
 
     width: 100%;
-    height: auto;
+    height: 100%;
     top: 0;
     right: 0;
 }
@@ -246,7 +246,7 @@ p {
 
 body {
 
-    background-image: url("./images/background.jpg");
+    background-image: url("./images/background.webp");
     background-repeat: repeat-y;
     background-size: 100%;
     width: 100%;
@@ -254,11 +254,12 @@ body {
 }
 
 
-@media only screen and (max-width: 869px) {
+@media only screen and (max-width: 690px) {
     article.content {
         justify-content: center;
         align-items: center;
         padding-left: 0vw;
+        padding: 5vw;
     }
 }
 
@@ -309,7 +310,9 @@ article>ol>li>section:nth-of-type(2):has(button:focus) {
 
 @keyframes scroll {
     100% {
-        background-position: 0px -3000px;
+     
+        transform: translateX(0px);
+        transform: translateY(-3000px);
     }
 }
 

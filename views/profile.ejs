@@ -2,13 +2,13 @@
 
     <div class="bar">
         <h2>Profile</h2>
-        <button><img src="images/close.png"></button>
+        <button aria-label="close function"><img alt="close" src="images/close.png"></button>
     </div>
 
     <% if(typeof userData == 'undefined' || userData.length == 0) { %>
 
         <picture>
-            <img alt="profile pic" id="pfpic" src="images/pfpic.png">
+            <img alt="profile pic" id="profile pic" src="images/pfpic.webp">
         </picture>
     
         <p id="username">generic name</p>
@@ -26,7 +26,7 @@
     <% } else { %>
 
         <picture>
-            <img alt="profile" id="pfpic" src="images/pfpic.png">
+            <img alt="profile" id="pfpic" src="images/pfpic.webp">
         </picture>
     
         <p id="username"><%= userData.name %></p>
