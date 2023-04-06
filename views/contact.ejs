@@ -2,34 +2,29 @@
     <div class="bar">
 
         <% if(typeof userData == 'undefined' || userData.length == 0) { %>
+        <h2>Contact info</h2>
+        <button aria-label="close function"><img alt="close" src="images/close.png"></button>
+    </div>
+    <ul>
+        <li><img alt="email" src="images/email.png">
+            <a href="www.google.com" id="email">Email will appear here</a>
 
-         
-        
-        
-      
+        <li><img alt="work" src="images/work.png">
+            <a href="www.google.com" id="work">This is my job</a>
+        </li>
+        <li><img alt="github" src="images/github.png">
+            <a href="www.google.com" id="github"> github</a>
+        </li>
+        <li>
+            <p id="date">been on github for a little while</p>
+            <% } else { %>
             <h2>Contact info</h2>
             <button aria-label="close function"><img alt="close" src="images/close.png"></button>
-        </div>
-        <ul>
-            <li><img alt="email" src="images/email.png">
-                <a href="www.google.com" id="email">Email will appear here</a>
-    
-            <li><img alt="work" src="images/work.png">
-                <a href="www.google.com" id="work">This is my job</a>
-            </li>
-            <li><img alt="github" src="images/github.png">
-                <a href="www.google.com" id="github"> github</a>
-            </li>
-            <li>
-                <p id="date">been on github for a little while</p>
-            <% } else { %>
-                <h2>Contact info</h2>
-                <button aria-label="close function"><img alt="close" src="images/close.png"></button>
             </div>
             <ul>
                 <li><img alt="email" src="images/email.png">
                     <a href="www.google.com" id="email"><%= userData.email %> chris.gabriel@hotmail.nl</a>
-        
+
                 <li><img alt="work" src="images/work.png">
                     <a href="www.google.com" id="work"><%= userData.company %></a>
                 </li>
@@ -38,12 +33,7 @@
                 </li>
                 <li>
                     <p id="date">on github since <%= userData.created_at %></p>
+                </li>
+            </ul>
 
-
-
-
-                    </li>
-                </ul>
-        
             <% } %>
-     

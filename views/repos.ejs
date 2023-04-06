@@ -1,5 +1,3 @@
-
-
 <section class="repositories">
     <div class="bar">
 
@@ -7,22 +5,21 @@
         <button aria-label="close function"><img alt="close" src="/images/close.png"></button>
     </div>
     <h2>Here are some interesting repo's from me</h2>
- 
 
 
-<% if(typeof userData == 'undefined' || userData.length == 0) { %>
-
+    <% if(typeof userData == 'undefined' || userData.length == 0) { %>
     <div id="repo">die komen hier</div>
 
     <% } else { %>
-        <div id="repo">
-        <ul >
+    <div id="repo">
+        <ul>
             <% repos.forEach(repo => { %>
-           
-                <li><a href="<%= repo.html_url %>"><p>
-                    <%= repo.name %> <br> <%= repo.description %></p></a></li>
+            <li><a href="<%= repo.html_url %>">
+                    <p>
+                        <%= repo.name %> <br> <%= repo.description %></p>
+                </a></li>
             <% }) %>
         </ul>
-        </div>
+    </div>
     <% } %>
 </section>

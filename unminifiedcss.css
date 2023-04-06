@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'w95faregular';
+ 
+    font-weight: normal;
+    font-style: normal;
+    
+
+    src: local('Pacifico Regular'), local('Pacifico-Regular');
+    /* url('w95fa-webfont.woff2') format('woff2'), url('w95fa-webfont.woff') format('woff');
+    */
+  font-display: swap;
+}
+
+:root {
+
+    --default-font: 'w95faregular', monospace;
+}
+
+article.content {
+    padding-left: 7vw;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: stretch;
+    padding-bottom: 5em;
+
+}
+
+article section {
+
+    opacity: 1;
+    width: 40vw;
+    min-width: 18em;
+    margin: 1em;
+
+
+    border-radius: 0.6em;
+    border: 2px solid rgb(0, 0, 0);
+
+
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image: linear-gradient(0deg, #e5e5f7 50%, #00000008 50%);
+    background-size: 17px 17px;
+    filter: drop-shadow(10px 10px 0px #c0007d);
+}
+
+article>section:hover {
+    transform: scale(1.01);
+}
+
+article ol {
+    list-style: none;
+}
+
+article ol section:hover {
+    transform: scale(1.01);
+}
+
+.bar {
+    filter: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    background: #d000ff;
+    padding: 1em;
+    border-radius: .5em .5em 0em 0em;
+    background-color: #d000ff;
+
+    background-image: radial-gradient(ellipse farthest-corner at 17px 17px, #cb00f9, #cb00f9 50%, #d000ff 50%);
+    background-size: 17px 17px;
+    opacity: 1;
+
+}
+
+h2 {
+    opacity: 1;
+    color: white;
+    font-family: var(--default-font);
+    font-size: 1.5em;
+
+}
+
+/* section:nth-of-type(1):has(> input:checked) div:nth-of-type(6) */
+
+
+.bar>button {
+    background-color: rgb(255, 98, 0);
+    outline: inherit;
+    color: inherit;
+    width: 2em;
+    height: 2em;
+
+    border: 2px solid darkred;
+
+
+
+}
+
+.bar>button>img {
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+button:hover {
+    color: red;
+    background-color: red;
+}
+
+button:focus {
+    color: red;
+    background-color: red;
+}
+
+
+@keyframes disappear {
+    0% {
+        transform: scaley(1);
+    }
+
+    10% {
+        transform: scaley(0);
+    }
+
+    90% {
+        transform: scaley(0);
+    }
+
+    100% {
+        transform: scaley(1);
+    }
+}
+
+p,
+a {
+    font-family: var(--default-font);
+    padding: 0.5em .5em .5em 1.5em;
+
+}
+
+a {
+    color: rgb(29, 7, 96);
+    text-decoration: none;
+}
+
+.profile>picture {
+
+    display: flex;
+    align-items: start;
+    flex-shrink: inherit;
+
+    width: 80%;
+    height: 30em;
+    padding: 1em;
+    padding-left: 20%;
+
+}
+
+.profile>ul {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(34, 215, 179, 0.298);
+    list-style: none;
+}
+
+.profile>p:first-of-type {
+    padding-top: 0.5em;
+    font-size: 3vh;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.profile>p:nth-of-type(2) {
+    text-align: center;
+    font-size: 2vh;
+    padding-bottom: 1em;
+}
+
+picture>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 4px solid rgb(195, 51, 159);
+
+}
+
+.contact {
+    margin-top: 2em;
+}
+
+.contact>ul {
+    list-style: none;
+}
+
+.contact>ul>li {
+    display: flex;
+    justify-content: start;
+    padding: 0.5em 0em 0em 1.5em;
+}
+
+.contact>ul>li img {
+    background-color: rgb(5, 144, 176);
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0;
+    margin: 0;
+    border-radius: 20%;
+}
+
+.contact>ul>li>a,
+p {
+    padding: 0.0em 0em .5em 1em;
+
+}
+
+.contact>ul>li>p:last-of-type {
+    color: grey;
+}
+
+.contact>ul>li:nth-of-type(odd)>a:hover {
+    transition: all 0.3s;
+    color: crimson;
+    transform: scale(1.1);
+
+}
+
+.contact>ul>li:nth-of-type(odd):has(> a:hover) img {
+    transition: all 0.3s;
+    background-color: crimson
+}
+
+body {
+
+    background-image: url("./images/background.webp");
+    background-repeat: repeat-y;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 690px) {
+    article.content {
+        justify-content: center;
+        align-items: center;
+        padding-left: 0vw;
+        padding: 5vw;
+    }
+}
+
+@media only screen and (max-width: 1580px) {
+    .profile>picture {
+        display: flex;
+        align-items: start;
+        flex-shrink: inherit;
+
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+}
+
+article>section:nth-of-type(1):has(button:focus) {
+
+    animation: disappear 1.5s linear;
+}
+
+article>ol>li>section:nth-of-type(1):has(button:focus) {
+
+    animation: disappear 1.5s linear;
+}
+
+article>ol>li>section:nth-of-type(2):has(button:focus) {
+    animation: disappear 1.5s linear;
+}
+
+
+
+
+.animbg {
+    z-index: -1;
+    animation: scroll 70s linear infinite;
+    background: url("https://github.com/ChrisvanHvA/progessive-web-app_chris/blob/master/public/images/effect.jpg?raw=true");
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes scroll {
+    100% {
+     
+        transform: translateX(0px);
+        transform: translateY(-3000px);
+    }
+}
+
+.repositories>h2:first-of-type {
+    padding-top: 0.5em;
+    color: black;
+    text-align: center;
+}
+
+#repo ul {
+    padding-top: 1.5em;
+    width: 90%;
+    margin-left: 5%;
+    list-style: none;
+}
+
+#repo ul li {
+
+    background-color: #71c4df69;
+    margin: 0.4em;
+    border-radius: 0.5em;
+    transition: all 0.5s;
+}
+
+#repo ul li:nth-of-type(odd):hover {
+    box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.424);
+    transform: rotate(5deg) scale(1.2);
+    background-color: rgb(219, 113, 223)
+}
+
+#repo ul li:nth-of-type(even):hover {
+    box-shadow: 0em 0em 1em rgba(0, 0, 0, 0.424);
+    transform: rotate(-5deg) scale(1.2);
+    background-color: rgb(254, 46, 112)
+}
+
+#repo ul li:hover a {
+    color: white;
+}
+
+#repo ul li ::first-line {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 1.1em;
+}

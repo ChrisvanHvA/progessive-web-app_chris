@@ -5,36 +5,27 @@ const router = express.Router();
 const fetch = require('node-fetch');
 
 // Code largely from the simple example, only app. changed into router and '/posts/' stripped from the url
-
 router.get("/", async function (req, res) {
-
 	const result = await apiCall();
 	const repos = await repoCall();
-
-
-	// repos.forEach(repo => {
-		
-	// });
-
-
+	repos.forEach(repo => {
+		console.log(repo.name);
+	});
 	res.render("index", {
 		'userData': result,
 		'repos': repos
 	});
-	
-	
 });
-
 async function apiCall() {
 	try {
 
 		const response = await fetch('https://api.github.com/users/ChrisvanHvA');
 
 		if (response.ok) {
-			const result = await response.json();	
+			const result = await response.json();
 			return result;
 		}
-		
+
 		return [];
 	} catch (error) {
 		return [];
@@ -46,10 +37,9 @@ async function repoCall() {
 		const repoResp = await fetch('https://api.github.com/users/ChrisvanHvA/repos');
 
 		if (repoResp.ok) {
-			const repos = await repoResp.json();	
+			const repos = await repoResp.json();
 			return repos;
 		}
-		
 		return [];
 	} catch (error) {
 		return [];
