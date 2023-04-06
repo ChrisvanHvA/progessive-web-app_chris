@@ -13,9 +13,8 @@ app.use(express.static('public'))
 
 
 
-// Get our route file
+// haalt de route file op die de api ophaald
 var homeRouter = require('./routes/home');
-// Tell express to use our posts.js file for /posts routes
 app.use('/', homeRouter);
 
 
