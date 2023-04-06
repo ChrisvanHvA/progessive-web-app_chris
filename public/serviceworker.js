@@ -6,7 +6,6 @@ const assets = [
 '/scripts/app.js',
 '/scripts/manifest.json',
 '/images/background.webp',
-'/images/pfpic.webp',
 '/images/effect.jpg',
 '/images/close.png',
 '/images/email.png',
