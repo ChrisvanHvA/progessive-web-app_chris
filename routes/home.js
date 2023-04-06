@@ -12,9 +12,9 @@ router.get("/", async function (req, res) {
 	const repos = await repoCall();
 
 
-	repos.forEach(repo => {
+	// repos.forEach(repo => {
 		
-	});
+	// });
 
 
 	res.render("index", {

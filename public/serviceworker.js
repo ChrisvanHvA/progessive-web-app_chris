@@ -1,7 +1,15 @@
 const staticCacheName = 'site-static';
 const assets = [
 '/',
-'/style.css'
+'/style.css',
+'/scripts/app.js',
+'/scripts/manifest.json',
+'/images/background.webp',
+'/images/effect.jpg',
+'/images/close.png',
+'/images/email.png',
+'/images/work.png',
+'/images/github.png'
 
 
 ];
