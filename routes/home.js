@@ -15,7 +15,14 @@ router.get("/", async function (req, res) {
 		'userData': result,
 		'repos': repos
 	});
+	
 });
+router.get("story", async (req, res) => {
+	res.render("story");
+  });
+  router.get("offline", async (req, res) => {
+	res.render("offline");
+  });
 async function apiCall() {
 	try {
 

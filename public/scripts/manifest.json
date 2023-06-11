@@ -1,3 +1,4 @@
+
 {
     "name": "Portfolio Chris",
     "short_name":  "portfolio",
@@ -6,6 +7,7 @@
     "background_color": "#FFFFFF",
     "theme_color": "#FFE1c4",
     "orientation": "portrait-primary",
+    
 "icons": [
     {
         "src": "/icons/icon_48.png",
